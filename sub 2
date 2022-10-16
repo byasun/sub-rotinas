@@ -3,20 +3,20 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Digite o primeiro numero: ");
-        int x = in.nextInt();
+        int a = in.nextInt();
         System.out.println("digite o segundo numero: ");
-        int y = in.nextInt();
-        System.out.println(soma(x, y));
-        System.out.println(sub(x, y));
-        System.out.println(mult(x, y)); 
+        int b = in.nextInt();
+        System.out.println(so(a, b));
+        System.out.println(su(a, b));
+        System.out.println(m(a, b)); 
     }
-    public static int soma(int x, int y) {
-        return x + y;
+    public static int so(int a, int b) {
+        return a + b;
     }
-    public static int mult(int x, int y) {
-        return x * y;
+    public static int m(int a, int b) {
+        return a * b;
     }
-    public static int sub(int x, int y) {
-        return x - y;
+    public static int su(int a, int b) {
+        return a - b;
     }
  }
