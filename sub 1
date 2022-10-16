@@ -1,73 +1,69 @@
 import java.util.*;
 public class Main {
-    public static void main(String[] args) {
-     Scanner scan=new Scanner(System.in);
-        System.out.println("informe a função que deseja \n " +
-                "1:dobro \n " +
-                "2:maior numero \n " +
-                "3:media de 3 numeros \n " +
-                "4:fatorial \n " +
-                "5:somatorio\n");
-        int esco=scan.nextInt();
-        switch (esco) {
-            case 1 : {
-                System.out.println("digite um numero: ");
-                int num = scan.nextInt();
-                System.out.print(dobro(num));
-            }
-            case 2 : {
-                System.out.println("digite um numero: ");
-                int num1 = scan.nextInt();
-                System.out.println("digite outro numero: ");
-                int num2 = scan.nextInt();
-                System.out.println(MaiorNumero(num1, num2));
-            }
-            case 3 : {
-                System.out.println("Digite o primeiro numero: ");
-                double x = scan.nextDouble();
-                System.out.println("Digite o segundo numero: ");
-                double y = scan.nextDouble();
-                System.out.println("Digite o terceiro numero: ");
-                double z = scan.nextDouble();
-                System.out.println(arit(x, y, z));
-            }
-            case 4 : {
-                System.out.println("digite um numero: ");
-                int num3 = scan.nextInt();
-                System.out.println(fat(num3));
-            }
-            case 5 : {
-                System.out.println("digite um numero: ");
-                int num4 = scan.nextInt();
-                System.out.println(som(num4));
-            }
-        }
+  public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+    System.out.print(
+        "informe a função que deseja \n 1:dobro \n 2:maior numero \n 3:media de 3 numeros \n 4:fatorial \n 5:somatorio");
+    int f = in.nextInt();
+    switch (f) {
+      case 1: {
+        System.out.print("Digite um número inteiro: ");
+        int a = in.nextInt();
+        System.out.print("O dobro desse número é " + (dobro(a)));
+      }
+      case 2: {
+        System.out.println("digite um numero: ");
+        int n1 = in.nextInt();
+        System.out.println("digite outro numero: ");
+        int n2 = in.nextInt();
+        System.out.print(maior(n1, n2));
+      }
+      case 3: {
+        System.out.println("Digite o primeiro numero: ");
+        double a = in.nextDouble();
+        System.out.println("Digite o segundo numero: ");
+        double b = in.nextDouble();
+        System.out.println("Digite o terceiro numero: ");
+        double c = in.nextDouble();
+        System.out.println(media(a, b, c));
+      }
+      case 4: {
+        System.out.println("Digite um numero: ");
+        int fa = in.nextInt();
+        System.out.println(fatorial(fa));
+      }
+      case 5: {
+        System.out.println("Digite um numero: ");
+        int a = in.nextInt();
+        System.out.println(soma(a));
+      }
     }
-    static int dobro(int x) {
-       return x*2;
+  }
+  public static int dobro(int a) {
+    return a = a * 2;
+  }
+  public static int maior(int n1, int n2) {
+    if (n1 > n2) {
+      return n1;
+    } else {
+      return n2;
     }
-    static int MaiorNumero(int x, int y){
-        if(x>=y){
-            return x;
-        } else {
-            return y;
-        }
+  }
+  public static double media(double a, double b, double c) {
+    return (a + b + c) / 3;
+  }
+  public static int fatorial(int a) {
+    int f = 1;
+    for (int i = 1; i <= a; i++) {
+      f = f * i;
     }
-    static double arit(double x, double y, double z){
-        return (x+y+z)/3;
+    return f;
+  }
+  public static int soma(int a) {
+    int s = 0;
+    for (int i = 1; i <= a; i++) {
+      s = s + i;
     }
-    public static int fat(int num3){
-        int v=1;
-        for(int i=1;i<=num3;i++){
-            v=v*i;
-        }
-        return v;
-    }
-    public static int som(int num4){
-        int v=0;
-        for(int i=1;i<=num4;i++){
-            v=v+i;
-        }
-        return v;
-    }
+    return s;
+  }
 }
